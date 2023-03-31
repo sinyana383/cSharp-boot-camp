@@ -1,0 +1,15 @@
+/Users/ddurrand/Desktop/C# projects/day00/day00/bin/Debug/net6.0/day00
+/Users/ddurrand/Desktop/C# projects/day00/day00/bin/Debug/net6.0/day00.deps.json
+/Users/ddurrand/Desktop/C# projects/day00/day00/bin/Debug/net6.0/day00.runtimeconfig.json
+/Users/ddurrand/Desktop/C# projects/day00/day00/bin/Debug/net6.0/day00.dll
+/Users/ddurrand/Desktop/C# projects/day00/day00/bin/Debug/net6.0/ref/day00.dll
+/Users/ddurrand/Desktop/C# projects/day00/day00/bin/Debug/net6.0/day00.pdb
+/Users/ddurrand/Desktop/C# projects/day00/day00/obj/Debug/net6.0/day00.csproj.AssemblyReference.cache
+/Users/ddurrand/Desktop/C# projects/day00/day00/obj/Debug/net6.0/day00.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ddurrand/Desktop/C# projects/day00/day00/obj/Debug/net6.0/day00.AssemblyInfoInputs.cache
+/Users/ddurrand/Desktop/C# projects/day00/day00/obj/Debug/net6.0/day00.AssemblyInfo.cs
+/Users/ddurrand/Desktop/C# projects/day00/day00/obj/Debug/net6.0/day00.csproj.CoreCompileInputs.cache
+/Users/ddurrand/Desktop/C# projects/day00/day00/obj/Debug/net6.0/day00.dll
+/Users/ddurrand/Desktop/C# projects/day00/day00/obj/Debug/net6.0/ref/day00.dll
+/Users/ddurrand/Desktop/C# projects/day00/day00/obj/Debug/net6.0/day00.pdb
+/Users/ddurrand/Desktop/C# projects/day00/day00/obj/Debug/net6.0/day00.genruntimeconfig.cache
