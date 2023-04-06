@@ -39,7 +39,7 @@ Console.WriteLine(customer5 + " (" + customer5.GoodsNumInCart + " items in cart)
 
 /* ex03 */
 
-var customer32 = new Customer("Ergan", 1);
+/*var customer32 = new Customer("Ergan", 1);
 var customer42 = new Customer("Natasha", 2);
 var customer52 = new Customer("Povar", 3);
 
@@ -57,4 +57,11 @@ var сashRegister2 = new CashRegister("#2");
 
 Console.WriteLine(сashRegister1 + " " + сashRegister1.GetCustomerNumberAtCheckout().ToString());
 Console.WriteLine(сashRegister2 + " " + сashRegister2.GetCustomerNumberAtCheckout().ToString());
-Console.WriteLine(сashRegister1 == сashRegister12);
+Console.WriteLine(сashRegister1 == сashRegister12);*/
+
+/* ex04 */
+
+// Store a = new Store(15,10);
+// Console.WriteLine(a.IsOpen());
+
+/* ex05 */

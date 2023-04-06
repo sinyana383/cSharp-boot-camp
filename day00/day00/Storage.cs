@@ -21,8 +21,5 @@ public class Storage
         get => _goodsNum;
         set { if (value > 0 && value <= _capacity) _goodsNum = value; }
     }
-
-    // ??? which will return information about the goods that are out of stock
-    // lambda operator '=>'
-    public int IsEmpty => _capacity - _goodsNum;
+    public bool IsEmpty => _goodsNum == 0;
 }
