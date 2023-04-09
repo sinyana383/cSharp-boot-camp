@@ -27,10 +27,18 @@ public class Customer
     public static bool operator ==(Customer a, Customer b) => a.Name == b.Name && a.SerialNum == b.SerialNum;
     public static bool operator !=(Customer a, Customer b) => a.Name != b.Name || a.SerialNum != b.SerialNum;
 
-    public void FillCart(int cartCapacity)
+    public override bool Equals(object? obj)
     {
-        if (cartCapacity < 1) return;
+        if (obj == null || GetType() != obj.GetType())
+            return false;
+        var other = (Customer)obj;
+        return this.Name == other.Name && this.SerialNum == other.SerialNum;
+    }
+
+    public void FillCart(int cartCapacity, Storage s)
+    {
+        if (cartCapacity < 1 || !s.IsEmpty) return;
         
-        GoodsNumInCart = r.Next() % cartCapacity + 1;
+        GoodsNumInCart = s.TakeGoods(r.Next() % cartCapacity + 1);
     }
 }

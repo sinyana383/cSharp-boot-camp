@@ -2,16 +2,18 @@ namespace day00;
 
 public class Store
 {
-    private Storage _storage;
-    private HashSet<CashRegister> _registersSet;
+    public Storage Storage { get; private set; }
+    public HashSet<CashRegister> RegistersSet { get; private set; }
 
-    public Store(int capacity, int numberOfRegisters)
+    public Store(int storageCapacity, int numberOfRegisters)
     {
-        _storage = new Storage(capacity);
-        _registersSet = new HashSet<CashRegister>(numberOfRegisters);
-        for (var i = 0; i < numberOfRegisters; ++i)
-            _registersSet.Add(new CashRegister('#' + i.ToString()));
+        Storage = new Storage(storageCapacity);
+        RegistersSet = new HashSet<CashRegister>(numberOfRegisters);
+        for (var i = 1; i <= numberOfRegisters; ++i)
+            RegistersSet.Add(new CashRegister('#' + i.ToString()));
     }
 
-    public bool IsOpen() => !_storage.IsEmpty;
+    public bool IsOpen() => !Storage.IsEmpty;
+    public CashRegister GetCashRegister(string name) => RegistersSet.FirstOrDefault(n => n.Name == name);
+    public int GetRegisterAmount() => RegistersSet.Count;
 }
