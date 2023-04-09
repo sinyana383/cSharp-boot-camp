@@ -2,7 +2,7 @@ namespace day00;
 
 public class CashRegister
 {
-    public string Name { get; private set; }
+    public string Name { get; }
     // is it necessary to encapsulate this property?
     private Queue<Customer> _queueCheckout;
 
@@ -13,9 +13,20 @@ public class CashRegister
     }
 
     public override string ToString() => "Register" + ' ' + Name;
-    public static bool operator ==(CashRegister a, CashRegister b) => a.Name == b.Name;
-    public static bool operator !=(CashRegister a, CashRegister b) => a.Name != b.Name;
+    public override bool Equals(object? obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+            return false;
+        var other = (CashRegister)obj;
+        return this.Name == other.Name;
+    }
 
+    public override int GetHashCode()
+    {
+        return Name.GetHashCode();
+    }
+
+    public IEnumerable<Customer> Customers => _queueCheckout;
     public void AddCustomerToCheckout(Customer c) => _queueCheckout.Enqueue(c);
 
     public int GetGoodsNumberFromAllCustomers()

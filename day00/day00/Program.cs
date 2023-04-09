@@ -69,14 +69,14 @@ Console.WriteLine(сashRegister1 == сashRegister12);*/
 // var r = new Random();
 // Store a = new Store(160,4);
 //
-// for (int i = 1; i <= a.getRegisterNumber(); ++i)
+// for (int i = 1; i <= a.GetRegisterAmount(); ++i)
 // {
 //     CashRegister cashI = a.GetCashRegister('#' + i.ToString());
 //     int nb = r.Next(1, 4);
 //     for (int p = 1; p <= nb; p++)
 //     {
 //         var customer = new Customer("noname" + i, p);
-//         customer.FillCart(16);
+//         customer.FillCart(16, a.Storage);
 //         cashI.AddCustomerToCheckout(customer);
 //         Console.WriteLine(customer + " (" + customer.GoodsNumInCart + " items in cart)");
 //     }
@@ -84,26 +84,26 @@ Console.WriteLine(сashRegister1 == сashRegister12);*/
 //                       + "with " + cashI.GetGoodsNumberFromAllCustomers() + " goods\n" );
 // }
 //
-// Console.WriteLine("The Least Customer Number on " + CustomerExtensions.LeastCustomerNumber(a.RregistersSet));
-// Console.WriteLine("The Least Goods Number on " + CustomerExtensions.LeastGoodsNumber(a.RregistersSet));
+// Console.WriteLine("The Least Customer Number on " + CustomerExtensions.LeastCustomerNumber(a.RegistersSet));
+// Console.WriteLine("The Least Goods Number on " + CustomerExtensions.LeastGoodsNumber(a.RegistersSet));
 
 /* ex06 */
 
-var s06 = new Store(40, 3);
-
-var cHS06 = new HashSet<Customer>(10);
-for (int i = 1; i <= 10; ++i)
-    cHS06.Add(new Customer("Noname", i));
-    
-while (s06.IsOpen() && cHS06.Count > 0)
-{
-    var c06 = cHS06.FirstOrDefault();
-    cHS06.Remove(c06);
-    c06.FillCart(7, s06.Storage);
-    CustomerExtensions.LeastCustomerNumber(s06.RegistersSet).AddCustomerToCheckout(c06);
-}
-
-if (cHS06.Count > 0)
-{
-    
-}
+// var s06 = new Store(40, 3);
+//
+// var cHS06 = new HashSet<Customer>(10);
+// for (int i = 1; i <= 10; ++i)
+//     cHS06.Add(new Customer("Noname", i));
+//     
+// while (s06.IsOpen() && cHS06.Count > 0)
+// {
+//     var c06 = cHS06.FirstOrDefault();
+//     cHS06.Remove(c06);
+//     c06.FillCart(7, s06.Storage);
+//     CustomerExtensions.LeastCustomerNumber(s06.RegistersSet).AddCustomerToCheckout(c06);
+// }
+//
+// if (cHS06.Count > 0)
+// {
+//     
+// }

@@ -21,7 +21,7 @@ public class Storage
         get => _goodsNum;
         set { if (value > 0 && value <= _capacity) _goodsNum = value; }
     }
-    public bool IsEmpty => _goodsNum == 0;
+    public bool IsEmpty => _goodsNum <= 0;
     public int TakeGoods(int num)
     {
         if (num > GoodsNum)

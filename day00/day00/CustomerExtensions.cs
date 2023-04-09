@@ -2,7 +2,7 @@ namespace day00;
 
 public static class CustomerExtensions
 {
-    public static CashRegister LeastCustomerNumber(HashSet<CashRegister> setOfRegisters)
+    public static  CashRegister LeastCustomerNumber(IEnumerable<CashRegister> setOfRegisters)
     {
         var minCustomers = setOfRegisters.FirstOrDefault();
         foreach (var cur in setOfRegisters)
@@ -13,7 +13,7 @@ public static class CustomerExtensions
         return minCustomers;
     }
     
-    public static CashRegister LeastGoodsNumber(HashSet<CashRegister> setOfRegisters)
+    public static CashRegister LeastGoodsNumber(IEnumerable<CashRegister> setOfRegisters)
     {
         var minGoods = setOfRegisters.FirstOrDefault();
         foreach (var cur in setOfRegisters)
