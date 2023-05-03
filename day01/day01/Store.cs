@@ -1,4 +1,5 @@
 namespace day00;
+using Newtonsoft.Json;
 
 public class Store
 {
@@ -9,10 +10,16 @@ public class Store
 
     public Store(int storageCapacity, int numberOfRegisters)
     {
+        
+        var r = new StreamReader("/Users/ddurrand/Desktop/c-/day01/day01/appsettings.json");
+        var json = r.ReadToEnd();
+        var items = JsonConvert.DeserializeObject<Dictionary<string, Int32>>(json);
+
         Storage = new Storage(storageCapacity);
         _registersSet = new HashSet<CashRegister>(numberOfRegisters);
         for (var i = 1; i <= numberOfRegisters; ++i)
-            _registersSet.Add(new CashRegister('#' + i.ToString()));
+            _registersSet.Add(new CashRegister('#' + i.ToString(), new TimeSpan(0, 0, items["_itemSpend"]),
+                new TimeSpan(0, 0, items["_customerSpend"])));
     }
 
     public bool IsOpen() => !Storage.IsEmpty;
