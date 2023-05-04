@@ -25,4 +25,17 @@ public class Store
     public bool IsOpen() => !Storage.IsEmpty;
     public CashRegister GetCashRegister(string name) => _registersSet.FirstOrDefault(n => n.Name == name);
     public int GetRegisterAmount() => _registersSet.Count;
+
+    public Thread[] OpenRegisters()
+    {
+        var cashThreads = new Thread[GetRegisterAmount()];
+        int threadIndex = -1;
+        foreach (CashRegister register in RegistersSet)
+        {
+            cashThreads[++threadIndex] = new Thread(() => register.Work(Storage));
+            cashThreads[threadIndex].Start();
+        }
+
+        return cashThreads;
+    }
 }

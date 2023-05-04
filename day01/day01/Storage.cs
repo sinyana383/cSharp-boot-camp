@@ -27,7 +27,7 @@ public class Storage
         if (num > GoodsNum)
             num = GoodsNum;
 
-        GoodsNum -= num;
+        Interlocked.Add(ref _goodsNum, -num);
         return num;
     }
 }

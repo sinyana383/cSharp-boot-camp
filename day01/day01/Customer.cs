@@ -21,9 +21,7 @@ public class Customer
     }
 
     public override string ToString()
-    {
-        return Name + ", customer #" + SerialNum;
-    }
+    => Name + ", customer #" + SerialNum;
 
     public override bool Equals(object? obj)
     {
@@ -34,14 +32,18 @@ public class Customer
     }
     
     public override int GetHashCode()
-    {
-        return HashCode.Combine(Name, SerialNum);
-    }
+    => HashCode.Combine(Name, SerialNum);
 
     public void FillCart(int cartCapacity, Storage s)
+    => GoodsNumInCart = s.TakeGoods(r.Next(1, cartCapacity + 1));
+
+    public void FillCartAndStandInCheckout(int cartCap, Store s, ref int threadCount, ManualResetEvent allThreadsComplete)
     {
-        if (cartCapacity < 1 || s.IsEmpty) return;
+        var reg06 = CustomerExtensions.LeastCustomerNumber(s.RegistersSet);
+        reg06.AddCustomerToCheckout(this);
+        FillCart(cartCap, s.Storage);
         
-        GoodsNumInCart = s.TakeGoods(r.Next(1, cartCapacity + 1));
+        if (Interlocked.Decrement(ref threadCount) <= 0)
+            allThreadsComplete.Set();
     }
 }
