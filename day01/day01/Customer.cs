@@ -6,10 +6,11 @@ public class Customer
 {
     // static field
     static Random r = new Random();
+    public static int TotalAmount;
 
     // auto-properties:
-    public string Name { get; private set; }
-    public int SerialNum { get; private set; }
+    public string Name { get; }
+    public int SerialNum { get; }
     public int GoodsNumInCart { get; private set; }
 
 
@@ -18,6 +19,7 @@ public class Customer
         Name = name;
         SerialNum = serialNum;
         GoodsNumInCart = 0;
+        Interlocked.Increment(ref TotalAmount);
     }
 
     public override string ToString()
@@ -37,13 +39,23 @@ public class Customer
     public void FillCart(int cartCapacity, Storage s)
     => GoodsNumInCart = s.TakeGoods(r.Next(1, cartCapacity + 1));
 
-    public void FillCartAndStandInCheckout(int cartCap, Store s, ref int threadCount, ManualResetEvent allThreadsComplete)
+    public void ThreadProcess(int cartCap, Store s, ref int threadCount, ManualResetEvent allThreadsComplete,
+        Store.Mode storeMode = Store.Mode.ShortestQueue)
     {
-        var reg06 = CustomerExtensions.LeastCustomerNumber(s.RegistersSet);
-        reg06.AddCustomerToCheckout(this);
-        FillCart(cartCap, s.Storage);
-        
+
+        FillCartAndChooseRegister(cartCap, s, storeMode);
         if (Interlocked.Decrement(ref threadCount) <= 0)
             allThreadsComplete.Set();
+    }
+
+    public void FillCartAndChooseRegister(int cartCap, Store s, Store.Mode storeMode = Store.Mode.ShortestQueue)
+    {
+        CashRegister reg;
+        if (storeMode == Store.Mode.ShortestQueue)
+            reg = CustomerExtensions.LeastCustomerNumber(s.RegistersSet);
+        else
+            reg = CustomerExtensions.LeastGoodsNumber(s.RegistersSet);
+        reg.AddCustomerToCheckout(this);
+        FillCart(cartCap, s.Storage);
     }
 }

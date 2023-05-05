@@ -1,20 +1,29 @@
+using System.Timers;
+
 namespace day00;
 using Newtonsoft.Json;
 
 public class Store
 {
+    private static int _cartCapasity = 10;
+    
+    public enum Mode
+    {
+        ShortestQueue,
+        LeastNumberOfGoods
+    }
+    public Mode StoreMode = Mode.ShortestQueue;
     public Storage Storage { get; }
     private HashSet<CashRegister> _registersSet;
 
     public IEnumerable<CashRegister> RegistersSet => _registersSet;
-
-    public Store(int storageCapacity, int numberOfRegisters)
+    public Store(int storageCapacity, int numberOfRegisters, int cartCapasity)
     {
-        
         var r = new StreamReader("/Users/ddurrand/Desktop/c-/day01/day01/appsettings.json");
         var json = r.ReadToEnd();
         var items = JsonConvert.DeserializeObject<Dictionary<string, Int32>>(json);
 
+        _cartCapasity = cartCapasity;
         Storage = new Storage(storageCapacity);
         _registersSet = new HashSet<CashRegister>(numberOfRegisters);
         for (var i = 1; i <= numberOfRegisters; ++i)
@@ -37,5 +46,14 @@ public class Store
         }
 
         return cashThreads;
+    }
+
+    public void AddNewCustomerEvery7Seconds(object? sender, ElapsedEventArgs e)
+    {
+        if (!IsOpen()) return;
+        Console.WriteLine("new Customer came");
+        var cust = new Customer("SevenSecond", Customer.TotalAmount);
+        
+        cust.FillCartAndChooseRegister(_cartCapasity, this, StoreMode);
     }
 }

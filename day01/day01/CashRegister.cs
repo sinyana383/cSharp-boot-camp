@@ -5,6 +5,7 @@ public class CashRegister
 {
     private ConcurrentQueue<Customer> _queueCheckout;
     private TimeSpan _allTimeSpan = TimeSpan.Zero;
+    private int _passCustomersNumber = 0;
     static private TimeSpan _itemSpend;
     static private TimeSpan _betweenCustomerSpend;
     // static public bool AreAnyCustomersLeft = true;
@@ -41,7 +42,13 @@ public class CashRegister
     public int GetCustomerNumberAtCheckout() => _queueCheckout.ToArray().Length;
 
     public IEnumerable<Customer> Customers => _queueCheckout;
-    public void AddCustomerToCheckout(Customer c) => _queueCheckout.Enqueue(c);
+
+    public void AddCustomerToCheckout(Customer c)
+    {
+        _queueCheckout.Enqueue(c);
+        Interlocked.Increment(ref _passCustomersNumber);
+    }
+
 
     public void Process(Customer c)
     {
@@ -50,19 +57,20 @@ public class CashRegister
         Thread.Sleep(_betweenCustomerSpend);
         _allTimeSpan = _allTimeSpan.Add(TimeSpan.FromSeconds(_itemSpend.Seconds * c.GoodsNumInCart
                                                              + _betweenCustomerSpend.Seconds));
-        Console.WriteLine($"{this} -> {c} total: {_allTimeSpan.Seconds} sec" +
-                          $"with {c.GoodsNumInCart} goods" +
-                          $"{_queueCheckout.Count} customers behind");
+        Console.WriteLine($"{this} -> {c} total: {_allTimeSpan.Seconds} sec\n" +
+                          $"with {c.GoodsNumInCart} goods\n" +
+                          $"{_queueCheckout.Count} customers behind\n");
     }
 
     public void Work(Storage s)
     {
-        while (_queueCheckout.Any())
+        while (_queueCheckout.Any() || !s.IsEmpty)
         {
             Customer curCustomer;
             _queueCheckout.TryDequeue(out curCustomer);
             if (curCustomer != null)
                 Process(curCustomer);
         }
+        Console.WriteLine($"{this}, average time: {_allTimeSpan / _passCustomersNumber}");
     }
 }
