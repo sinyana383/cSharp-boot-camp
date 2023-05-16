@@ -1,4 +1,4 @@
-﻿using day00;
+﻿using day01;
 
 const int custNum = 10;
 const int storCap = 50;
@@ -16,13 +16,13 @@ var s06 = new Store(storCap, regNum, cartCap);
 
 // Customers
 var cHS06 = new HashSet<Customer>(custNum);
-int custIn = 1;
+var custIn = 1;
 for (custIn = 1; custIn <= custNum; ++custIn)
     cHS06.Add(new Customer("Noname", custIn));
 
 // Threads and Events
 int threadCount = custNum;
-ManualResetEvent allThreadsComplete = new ManualResetEvent(false);
+var allThreadsComplete = new ManualResetEvent(false);
 
 Parallel.ForEach(cHS06, customer =>
 {

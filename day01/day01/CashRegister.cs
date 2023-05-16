@@ -1,13 +1,13 @@
-namespace day00;
+namespace day01;
 using System.Collections.Concurrent;
 
 public class CashRegister
 {
-    static Random r = new Random();
-    static private TimeSpan _itemSpend;
-    static private TimeSpan _betweenCustomerSpend;
+    private static readonly Random s_r = new Random();
+    private static  TimeSpan s_itemSpend;
+    private static TimeSpan s_betweenCustomerSpend;
     
-    private ConcurrentQueue<Customer> _queueCheckout;
+    private readonly ConcurrentQueue<Customer> _queueCheckout;
     private TimeSpan _allTimeSpan = TimeSpan.Zero;
     private int _passCustomersNumber;
     public string Name { get; }
@@ -16,10 +16,9 @@ public class CashRegister
     {
         Name = name;
         _queueCheckout = new ConcurrentQueue<Customer>();
-        _itemSpend = itemSpend;
-        _betweenCustomerSpend = betweenCustomerSpend;
+        s_itemSpend = itemSpend;
+        s_betweenCustomerSpend = betweenCustomerSpend;
     }
-
     public override string ToString() => "Register" + ' ' + Name;
     public override bool Equals(object? obj)
     {
@@ -34,34 +33,30 @@ public class CashRegister
     }
     public int GetGoodsNumberFromAllCustomers()
     {
-        int res = 0;
+        var res = 0;
         var qEnum = _queueCheckout.GetEnumerator();
         while (qEnum.MoveNext())
             res += qEnum.Current.GoodsNumInCart;
         return res;
     }
     public int GetCustomerNumberAtCheckout() => _queueCheckout.ToArray().Length;
-
     public IEnumerable<Customer> Customers => _queueCheckout;
-
     public void AddCustomerToCheckout(Customer c)
     {
         _queueCheckout.Enqueue(c);
         Interlocked.Increment(ref _passCustomersNumber);
     }
-
-
-    public void Process(Customer c)
+    private void Process(Customer c)
     {
-        int allItemSpend = 0;
-        for (int i = 0; i < c.GoodsNumInCart; ++i)
+        var allItemSpend = 0;
+        for (var i = 0; i < c.GoodsNumInCart; ++i)
         {
-            int itemSpend = r.Next(1, _itemSpend.Seconds);
+            int itemSpend = s_r.Next(1, s_itemSpend.Seconds);
             Thread.Sleep(itemSpend * 1000);
             allItemSpend += itemSpend;
         }
 
-        int betweenCustomerSpend = r.Next(1, _betweenCustomerSpend.Seconds);
+        int betweenCustomerSpend = s_r.Next(1, s_betweenCustomerSpend.Seconds);
         Thread.Sleep(betweenCustomerSpend * 1000);
         _allTimeSpan = _allTimeSpan.Add(TimeSpan.FromSeconds(allItemSpend + betweenCustomerSpend));
         Console.WriteLine($"{this} -> {c} total: {_allTimeSpan.Seconds} sec\n" +

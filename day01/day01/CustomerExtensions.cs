@@ -1,25 +1,26 @@
-namespace day00;
+namespace day01;
 
 public static class CustomerExtensions
 {
     public static  CashRegister LeastCustomerNumber(IEnumerable<CashRegister> setOfRegisters)
     {
         var minCustomers = setOfRegisters.FirstOrDefault();
-        foreach (var cur in setOfRegisters)
+        foreach (CashRegister cur in setOfRegisters)
+        {
             minCustomers = cur.GetCustomerNumberAtCheckout() < minCustomers.GetCustomerNumberAtCheckout() 
-                ? cur
-                : minCustomers;
+                ? cur : minCustomers;
+        }
 
         return minCustomers;
     }
-    
     public static CashRegister LeastGoodsNumber(IEnumerable<CashRegister> setOfRegisters)
     {
         var minGoods = setOfRegisters.FirstOrDefault();
-        foreach (var cur in setOfRegisters)
+        foreach (CashRegister cur in setOfRegisters)
+        {
             minGoods = cur.GetGoodsNumberFromAllCustomers() < minGoods.GetGoodsNumberFromAllCustomers()
-                ? cur
-                : minGoods;
+                ? cur : minGoods;
+        }
 
         return minGoods;
     }
