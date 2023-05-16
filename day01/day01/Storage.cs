@@ -28,6 +28,7 @@ public class Storage
             num = GoodsNum;
 
         Interlocked.Add(ref _goodsNum, -num);
+        Console.WriteLine(GoodsNum + " goods left");
         return num;
     }
 }

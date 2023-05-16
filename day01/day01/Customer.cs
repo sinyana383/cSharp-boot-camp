@@ -51,11 +51,11 @@ public class Customer
     public void FillCartAndChooseRegister(int cartCap, Store s, Store.Mode storeMode = Store.Mode.ShortestQueue)
     {
         CashRegister reg;
+        FillCart(cartCap, s.Storage);
         if (storeMode == Store.Mode.ShortestQueue)
             reg = CustomerExtensions.LeastCustomerNumber(s.RegistersSet);
         else
             reg = CustomerExtensions.LeastGoodsNumber(s.RegistersSet);
         reg.AddCustomerToCheckout(this);
-        FillCart(cartCap, s.Storage);
     }
 }

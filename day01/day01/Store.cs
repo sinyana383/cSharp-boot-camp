@@ -6,7 +6,9 @@ using Newtonsoft.Json;
 public class Store
 {
     private static int _cartCapasity = 10;
-    
+    private HashSet<CashRegister> _registersSet;
+
+    public bool IsSomeCustomerIn = true;
     public enum Mode
     {
         ShortestQueue,
@@ -14,7 +16,6 @@ public class Store
     }
     public Mode StoreMode = Mode.ShortestQueue;
     public Storage Storage { get; }
-    private HashSet<CashRegister> _registersSet;
 
     public IEnumerable<CashRegister> RegistersSet => _registersSet;
     public Store(int storageCapacity, int numberOfRegisters, int cartCapasity)
@@ -27,8 +28,8 @@ public class Store
         Storage = new Storage(storageCapacity);
         _registersSet = new HashSet<CashRegister>(numberOfRegisters);
         for (var i = 1; i <= numberOfRegisters; ++i)
-            _registersSet.Add(new CashRegister('#' + i.ToString(), new TimeSpan(0, 0, items["_itemSpend"]),
-                new TimeSpan(0, 0, items["_customerSpend"])));
+            _registersSet.Add(new CashRegister('#' + i.ToString(), new TimeSpan(0, 0, items["timePerItem"]),
+                new TimeSpan(0, 0, items["timePerCustomer"])));
     }
 
     public bool IsOpen() => !Storage.IsEmpty;
@@ -41,7 +42,7 @@ public class Store
         int threadIndex = -1;
         foreach (CashRegister register in RegistersSet)
         {
-            cashThreads[++threadIndex] = new Thread(() => register.Work(Storage));
+            cashThreads[++threadIndex] = new Thread(() => register.Work(this));
             cashThreads[threadIndex].Start();
         }
 
@@ -51,9 +52,11 @@ public class Store
     public void AddNewCustomerEvery7Seconds(object? sender, ElapsedEventArgs e)
     {
         if (!IsOpen()) return;
+        IsSomeCustomerIn = true;
         Console.WriteLine("new Customer came");
         var cust = new Customer("SevenSecond", Customer.TotalAmount);
         
         cust.FillCartAndChooseRegister(_cartCapasity, this, StoreMode);
+        IsSomeCustomerIn = false;
     }
 }
