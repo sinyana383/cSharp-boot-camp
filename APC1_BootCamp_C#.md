@@ -525,10 +525,13 @@ Create a test in the *ElementsTests* file.
 Following the test naming convention, the test name will be as follows:
 Given_Code_When_LanguageAndCodeAsParameter_Then_ReturnMarkdownCodeMarkup.
 
-Next, take the line ```` ```csharp\
+Next, take the line 
+````
+```csharp\
 some code\
 ```\
- ```` as a reference and put its value in the *expected* variable. Then create an object of the *Code* type with the ```csharp``` and ```some code``` parameters and call the *Create* method. Save the result to the *actual* variable. Now, to check the value, use the static **Assert** class and compare the two values. If the values are not equal, the test will fail. 
+```` 
+as a reference and put its value in the *expected* variable. Then create an object of the *Code* type with the ```csharp``` and ```some code``` parameters and call the *Create* method. Save the result to the *actual* variable. Now, to check the value, use the static **Assert** class and compare the two values. If the values are not equal, the test will fail. 
 
 The actions described above are a pattern of building unit-tests, which is called **AAA-Arrange**, **Act**, **Assert**. The **Arrange** block configures the unit-test environment (creating a *Code* object, *expected* declaration). The test script is executed in the **Act** block. And in the **Assert** block, the results are checked. Follow this pattern, and your tests will be clean, they will be easy to read.
 
