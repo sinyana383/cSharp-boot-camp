@@ -7,19 +7,19 @@
 
 /* ex00 */
 
-/*var s = new Storage(10, 4);
- s.GoodsNum = 10;
- Console.WriteLine(s.GoodsNum);*/
+// var s = new Storage(10, 4);
+//  s.GoodsNum = 10;
+//  Console.WriteLine(s.GoodsNum);
 
 /* ex01 */
 
-/*var customer1 = new Customer("Andrew", 1);
+var customer1 = new Customer("Andrew", 1);
 var customer2 = new Customer("Andrew", 1);
 
 Console.WriteLine(customer1);
 Console.WriteLine(customer2);
 if (customer1 == customer2)
-    Console.WriteLine(customer1 == customer2);*/
+    Console.WriteLine(customer1 == customer2);
 
 
 /* ex02 */
