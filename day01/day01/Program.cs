@@ -1,5 +1,7 @@
-﻿using day01;
+﻿using System.Globalization;
+using day01;
 
+Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 const int custNum = 10;
 const int storCap = 50;
 const int regNum = 4;

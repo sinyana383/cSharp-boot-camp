@@ -1,1 +1,10 @@
 .DS_Store
+*.cache
+*.dll
+*.pdb
+.idea
+.NET*
+obj
+bin
+TestPoligon
+*.user
