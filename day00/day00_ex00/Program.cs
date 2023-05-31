@@ -13,7 +13,7 @@ if (args.Length < 3)
     return ErrorMassage();
 if (!(double.TryParse(args[0], out sum) && double.TryParse(args[1], out rate) && int.TryParse(args[2], out term)))
     return ErrorMassage();
-if (sum <= 0 || (rate <= 0 || rate - 100.0d > 0) || term < 1)
+if (sum <= 0 || rate <= 0 || term <= 0)
     return ErrorMassage();
 
 double i = rate / (12 * 100);
