@@ -1,23 +1,44 @@
 ﻿using System.Globalization;
 
 var curCult = new CultureInfo("en-GB");
+// DateTime curDate = DateTime.Now;
+// For checking 1st and 2nd examples from the Task
+var curDate = new DateTime(2021, 05, 15);
+
 double sum;
 double rate;
 int term;
-
 //  Errors checks
 if (args.Length < 3)
     return ErrorMassage();
 if (!(double.TryParse(args[0], out sum) && double.TryParse(args[1], out rate) && int.TryParse(args[2], out term)))
     return ErrorMassage();
-// rate == 0 if you borrow from friends or relatives :)
-if (sum <= 0 || (rate < 0 || rate - 100.0d > 0) || (term < 1 || term > 12))
+if (sum <= 0 || (rate <= 0 || rate - 100.0d > 0) || term < 1)
     return ErrorMassage();
 
-var i = rate / (12 * 100);
+double i = rate / (12 * 100);
+double payment = (sum * i * Math.Pow(1 + i, term)) / (Math.Pow(1 + i, term) - 1);
+for (int no = 1; no <= term; no++)
+{
+    DateTime payDate = new DateTime(curDate.AddMonths(no).Year, curDate.AddMonths(no).Month, 1);
+    double interest = sum * rate * DateTime.DaysInMonth(payDate.Year, payDate.AddMonths(-1).Month) 
+                      / (100 * (DateTime.IsLeapYear(payDate.Year) ? 366 : 365) );
+    double principaldebt = payment - interest;
+    if (no == term)
+    {
+        principaldebt = sum;
+        payment = principaldebt + interest;
+    }
 
-// Console.WriteLine("| Payment no. | Payment date | Payment | Principal debt | Interest | Remaining debt |");
+    Console.WriteLine($"{no}\t" +
+                      $"{payDate.ToString("MM/dd/yyyy", curCult)}\t" +
+                      $"{payment, -12:N2}\t" +
+                      $"{principaldebt, -12:N2}\t" +
+                      $"{interest, -12:N2}\t" +
+                      $"{(sum - principaldebt), 0:N2}");
 
+    sum -= principaldebt;
+}
 
 static int ErrorMassage()
 {
