@@ -22,7 +22,8 @@ public class Store
     public IEnumerable<CashRegister> CashRegistersSet => _cashRegistersSet;
     public Store(int storageCapacity, int numberOfRegisters, int cartCapasity)
     {
-        var r = new StreamReader("/Users/ddurrand/Desktop/c-/day01/day01/appsettings.json");
+        var r = new StreamReader("/Users/ddurrand/Desktop/c#/day06/day06/appsettings.json");
+        // !!! Добавить проверку, что файл открылся
         var json = r.ReadToEnd();
         var items = JsonConvert.DeserializeObject<Dictionary<string, Int32>>(json);
 

@@ -1,4 +1,4 @@
-namespace day01;
+namespace day00;
 
 public class Storage
 {
