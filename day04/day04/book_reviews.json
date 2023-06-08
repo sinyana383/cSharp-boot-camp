@@ -1,0 +1,680 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2023 The New York Times Company.  All Rights Reserved.",
+  "num_results": 15,
+  "last_modified": "2023-05-31T22:24:43-04:00",
+  "results": [
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 1,
+      "rank_last_week": 0,
+      "weeks_on_list": 1,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/1250284112?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "1250284112",
+          "isbn13": "9781250284112"
+        },
+        {
+          "isbn10": "1250284325",
+          "isbn13": "9781250284327"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "IDENTITY",
+          "description": "After her roommate is killed by a con artist, a former Army brat builds a new life at her mother's home in Vermont.",
+          "contributor": "by Nora Roberts",
+          "author": "Nora Roberts",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "St. Martin's",
+          "primary_isbn13": "9781250284112",
+          "primary_isbn10": "1250284112"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 2,
+      "rank_last_week": 2,
+      "weeks_on_list": 5,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/0593441273?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "0593441273",
+          "isbn13": "9780593441275"
+        },
+        {
+          "isbn10": "0593441206",
+          "isbn13": "9780593441206"
+        },
+        {
+          "isbn10": "0593675118",
+          "isbn13": "9780593675113"
+        },
+        {
+          "isbn10": "0593740149",
+          "isbn13": "9780593740149"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "HAPPY PLACE",
+          "description": "A former couple pretend to be together for the sake of their friends during their annual getaway in Maine.",
+          "contributor": "by Emily Henry",
+          "author": "Emily Henry",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Berkley",
+          "primary_isbn13": "9780593441275",
+          "primary_isbn10": "0593441273"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 3,
+      "rank_last_week": 12,
+      "weeks_on_list": 4,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/0802162177?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "0802162177",
+          "isbn13": "9780802162175"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "THE COVENANT OF WATER",
+          "description": "Three generations of a family living on South India’s Malabar Coast suffer the loss of a family member by drowning.",
+          "contributor": "by Abraham Verghese",
+          "author": "Abraham Verghese",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Grove",
+          "primary_isbn13": "9780802162175",
+          "primary_isbn10": "0802162177"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 4,
+      "rank_last_week": 4,
+      "weeks_on_list": 55,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/038554734X?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "038554734X",
+          "isbn13": "9780385547345"
+        },
+        {
+          "isbn10": "0593507533",
+          "isbn13": "9780593507537"
+        },
+        {
+          "isbn10": "0385547374",
+          "isbn13": "9780385547376"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "LESSONS IN CHEMISTRY",
+          "description": "A scientist and single mother living in California in the 1960s becomes a star on a TV cooking show.",
+          "contributor": "by Bonnie Garmus",
+          "author": "Bonnie Garmus",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Doubleday",
+          "primary_isbn13": "9780385547345",
+          "primary_isbn10": "038554734X"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 5,
+      "rank_last_week": 3,
+      "weeks_on_list": 4,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/1649374046?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "1649374046",
+          "isbn13": "9781649374042"
+        },
+        {
+          "isbn10": "1649374089",
+          "isbn13": "9781649374080"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "FOURTH WING",
+          "description": "Violet Sorrengail is urged by the commanding general, who also is her mother, to become a candidate for the elite dragon riders.",
+          "contributor": "by Rebecca Yarros",
+          "author": "Rebecca Yarros",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Red Tower",
+          "primary_isbn13": "9781649374042",
+          "primary_isbn10": "1649374046"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 6,
+      "rank_last_week": 6,
+      "weeks_on_list": 30,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/0063251922?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "0063251922",
+          "isbn13": "9780063251922"
+        },
+        {
+          "isbn10": "006325199X",
+          "isbn13": "9780063251991"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "DEMON COPPERHEAD",
+          "description": "Winner of a 2023 Pulitzer Prize for fiction. A reimagining of Charles Dickens’s “David Copperfield” set in the mountains of southern Appalachia.",
+          "contributor": "by Barbara Kingsolver",
+          "author": "Barbara Kingsolver",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Harper",
+          "primary_isbn13": "9780063251922",
+          "primary_isbn10": "0063251922"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 7,
+      "rank_last_week": 7,
+      "weeks_on_list": 4,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/0316402788?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "0316402788",
+          "isbn13": "9780316402781"
+        },
+        {
+          "isbn10": "0316402982",
+          "isbn13": "9780316402989"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "THE 23RD MIDNIGHT",
+          "description": "The 23rd book in the Women’s Murder Club series. Lindsay Boxer tracks a copycat killer.",
+          "contributor": "by James Patterson and Maxine Paetro",
+          "author": "James Patterson and Maxine Paetro",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Little, Brown",
+          "primary_isbn13": "9780316402781",
+          "primary_isbn10": "0316402788"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 8,
+      "rank_last_week": 9,
+      "weeks_on_list": 6,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/1538750635?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "1538750635",
+          "isbn13": "9781538750636"
+        },
+        {
+          "isbn10": "1538750597",
+          "isbn13": "9781538750599"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "SIMPLY LIES",
+          "description": "A former detective becomes the prime suspect in a murder case involving a man with mob ties who was in witness protection.",
+          "contributor": "by David Baldacci",
+          "author": "David Baldacci",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Grand Central",
+          "primary_isbn13": "9781538750636",
+          "primary_isbn10": "1538750635"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 9,
+      "rank_last_week": 0,
+      "weeks_on_list": 1,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/0593422783?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "0593422783",
+          "isbn13": "9780593422786"
+        },
+        {
+          "isbn10": "0593422791",
+          "isbn13": "9780593422793"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "TOM CLANCY: FLASH POINT",
+          "description": "When aircraft from rival nations have a midair collision and the Campus is attacked, Jack Ryan Jr. tries to avert a war.",
+          "contributor": "by Don Bentley",
+          "author": "Don Bentley",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Putnam",
+          "primary_isbn13": "9780593422786",
+          "primary_isbn10": "0593422783"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 10,
+      "rank_last_week": 5,
+      "weeks_on_list": 2,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/0063250837?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "0063250837",
+          "isbn13": "9780063250833"
+        },
+        {
+          "isbn10": "0063250845",
+          "isbn13": "9780063250840"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "YELLOWFACE",
+          "description": "June Hayward, a struggling writer, must conceal the fact that she stole Athena Liu’s just-finished masterpiece after Liu’s sudden death.",
+          "contributor": "by R.F. Kuang",
+          "author": "R.F. Kuang",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Morrow",
+          "primary_isbn13": "9780063250833",
+          "primary_isbn10": "0063250837"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 11,
+      "rank_last_week": 13,
+      "weeks_on_list": 11,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/0593243730?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "0593243730",
+          "isbn13": "9780593243732"
+        },
+        {
+          "isbn10": "0593243749",
+          "isbn13": "9780593243749"
+        },
+        {
+          "isbn10": "0593664043",
+          "isbn13": "9780593664049"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "HELLO BEAUTIFUL",
+          "description": "In a homage to Louisa May Alcott’s “Little Women,” a young man’s dark past resurfaces as he gets to know the family of his college sweetheart.",
+          "contributor": "by Ann Napolitano",
+          "author": "Ann Napolitano",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Dial",
+          "primary_isbn13": "9780593243732",
+          "primary_isbn10": "0593243730"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 12,
+      "rank_last_week": 0,
+      "weeks_on_list": 34,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/0593321200?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "0593321200",
+          "isbn13": "9780593321201"
+        },
+        {
+          "isbn10": "0593321219",
+          "isbn13": "9780593321218"
+        },
+        {
+          "isbn10": "0593591631",
+          "isbn13": "9780593591635"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "TOMORROW, AND TOMORROW, AND TOMORROW",
+          "description": "Two friends find their partnership challenged in the world of video game design.",
+          "contributor": "by Gabrielle Zevin",
+          "author": "Gabrielle Zevin",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Knopf",
+          "primary_isbn13": "9780593321201",
+          "primary_isbn10": "0593321200"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 13,
+      "rank_last_week": 11,
+      "weeks_on_list": 3,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/052565559X?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "052565559X",
+          "isbn13": "9780525655596"
+        },
+        {
+          "isbn10": "0525655603",
+          "isbn13": "9780525655602"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "THE MAKING OF ANOTHER MAJOR MOTION PICTURE MASTERPIECE",
+          "description": "A World War II soldier’s experiences inspire a comic book, which gets adapted into a superhero movie.",
+          "contributor": "by Tom Hanks",
+          "author": "Tom Hanks",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Knopf",
+          "primary_isbn13": "9780525655596",
+          "primary_isbn10": "052565559X"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 14,
+      "rank_last_week": 1,
+      "weeks_on_list": 2,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/1982181699?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "1982181699",
+          "isbn13": "9781982181697"
+        },
+        {
+          "isbn10": "1982181729",
+          "isbn13": "9781982181727"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "ONLY THE DEAD",
+          "description": "The sixth book in the Terminal List series. The killing of a freshman congressman reverberates for decades and James Reece faces a global conspiracy.",
+          "contributor": "by Jack Carr",
+          "author": "Jack Carr",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Atria/Emily Bestler",
+          "primary_isbn13": "9781982181697",
+          "primary_isbn10": "1982181699"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    },
+    {
+      "list_name": "Hardcover Fiction",
+      "display_name": "Hardcover Fiction",
+      "bestsellers_date": "2023-05-27",
+      "published_date": "2023-06-11",
+      "rank": 15,
+      "rank_last_week": 0,
+      "weeks_on_list": 1,
+      "asterisk": 0,
+      "dagger": 0,
+      "amazon_product_url": "https://www.amazon.com/dp/038554832X?tag=NYTBSREV-20",
+      "isbns": [
+        {
+          "isbn10": "038554832X",
+          "isbn13": "9780385548328"
+        }
+      ],
+      "book_details": [
+        {
+          "title": "ROGUE JUSTICE",
+          "description": "The second book in the Avery Keene series. The Supreme Court clerk suspects something sinister inside the nation’s third branch of government.",
+          "contributor": "by Stacey Abrams",
+          "author": "Stacey Abrams",
+          "contributor_note": "",
+          "price": "0.00",
+          "age_group": "",
+          "publisher": "Doubleday",
+          "primary_isbn13": "9780385548328",
+          "primary_isbn10": "038554832X"
+        }
+      ],
+      "reviews": [
+        {
+          "book_review_link": "",
+          "first_chapter_link": "",
+          "sunday_review_link": "",
+          "article_chapter_link": ""
+        }
+      ]
+    }
+  ]
+}
