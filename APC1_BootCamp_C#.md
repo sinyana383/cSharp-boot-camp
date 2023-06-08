@@ -2015,7 +2015,7 @@ So, you need to develop a console application. When it is launched, it will coll
 
 Now you have an upload of this week's best-selling books taken from different categories. We believe the file is periodically updated and contains up-to-date information. From the information given in the list, we are interested in: the title of the book, its author, description, place in the rating and its (rating) title, as well as a link to a page in the store.
 
-The list of books must be loaded from the book_reviews.json file, they must be **deserialized** from **JSON** into the [corresponding entities](<https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-customize-properties>).
+The list of books must be loaded from the book_reviews.json file, they must be **deserialized** from **JSON** into the corresponding entities[](https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-customize-properties).
 
 Implement a separate output format for the resulting *BookReview* class by **overriding** the ToString() method. Let it output:
 
