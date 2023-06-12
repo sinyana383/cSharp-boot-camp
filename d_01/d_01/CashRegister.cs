@@ -1,9 +1,10 @@
-namespace day00;
+namespace d_01;
 
 public class CashRegister
 {
     public string Name { get; }
-    // is it necessary to encapsulate this property?
+    public int CustomersNumber => _queueCheckout.Count;
+
     private Queue<Customer> _queueCheckout;
 
     public CashRegister(string name)
@@ -12,7 +13,8 @@ public class CashRegister
         _queueCheckout = new Queue<Customer>();
     }
 
-    public override string ToString() => "Register" + ' ' + Name;
+    public static bool operator ==(CashRegister c1, CashRegister c2) => c1.Equals(c2);
+    public static bool operator !=(CashRegister c1, CashRegister c2) => !c1.Equals(c2);
     public override bool Equals(object? obj)
     {
         if (obj == null || GetType() != obj.GetType())
@@ -20,23 +22,22 @@ public class CashRegister
         var other = (CashRegister)obj;
         return this.Name == other.Name;
     }
-
     public override int GetHashCode()
     {
         return Name.GetHashCode();
     }
+    public override string ToString() => Name;
 
-    public IEnumerable<Customer> Customers => _queueCheckout;
+    // public IEnumerable<Customer> Customers => _queueCheckout;
     public void AddCustomerToCheckout(Customer c) => _queueCheckout.Enqueue(c);
 
-    public int GetGoodsNumberFromAllCustomers()
+    public int GetGoodsNumberFromQueue()
     {
-        int res = 0;
-        var qEnum = _queueCheckout.GetEnumerator();
-        while (qEnum.MoveNext())
-            res += qEnum.Current.GoodsNumInCart;
+        var res = 0;
+
+        foreach (Customer c in _queueCheckout)
+            res += c.GoodsNumInCart;
         return res;
     }
-
-    public int GetCustomerNumberAtCheckout() => _queueCheckout.ToArray().Length;
+    
 }

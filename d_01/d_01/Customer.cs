@@ -1,15 +1,15 @@
 using System.Security.Cryptography;
 
-namespace day00;
+namespace d_01;
 
 public class Customer
 {
-    // static field
+    // static fields
     static Random r = new Random();
 
     // auto-properties:
-    public string Name { get; private set; }
-    public int SerialNum { get; private set; }
+    public string Name { get; }
+    public int SerialNum { get; }
     public int GoodsNumInCart { get; private set; }
 
 
@@ -20,28 +20,26 @@ public class Customer
         GoodsNumInCart = 0;
     }
 
-    public override string ToString()
-    {
-        return Name + ", customer #" + SerialNum;
-    }
-
+    public override string ToString() => Name + ", customer #" + SerialNum;
+    public static bool operator ==(Customer c1, Customer c2) => c1.Equals(c2);
+    public static bool operator !=(Customer c1, Customer c2) => !c1.Equals(c2);
     public override bool Equals(object? obj)
     {
         if (obj == null || GetType() != obj.GetType())
             return false;
+        
         var other = (Customer)obj;
         return this.Name == other.Name && this.SerialNum == other.SerialNum;
     }
-    
     public override int GetHashCode()
     {
         return HashCode.Combine(Name, SerialNum);
     }
 
-    public void FillCart(int cartCapacity, Storage s)
+    public void FillCart(int cartCapacity)
     {
-        if (cartCapacity < 1 || s.IsEmpty) return;
+        if (cartCapacity < 1) return;
         
-        GoodsNumInCart = s.TakeGoods(r.Next(1, cartCapacity + 1));
+        GoodsNumInCart = r.Next(1, cartCapacity + 1);
     }
 }
