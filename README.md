@@ -2,7 +2,7 @@
 
 - :file_folder: Day00
   - [x] String.Format: CultureInfo, alignment
-  - [ ] [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
+  - [x] [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
 - :file_folder: Day01
   - [x] [lambda operator](<https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-operator>)
 - :file_folder: Day02
