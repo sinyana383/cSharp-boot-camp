@@ -19,7 +19,7 @@ Console.WriteLine($"Amount in the original currency: {origSum.ToString()}");
 foreach (var sums in exchanger.Convert(origSum))
     Console.WriteLine($"Amount in {sums.identifier}: {sums.ToString()}");
 
-    static int ErrorMassage()
+static int ErrorMassage()
 {
     Console.WriteLine("Input error. Check the input data and repeat the request.");
     return -1;

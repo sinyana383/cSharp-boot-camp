@@ -8,8 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Include="..\APC1_BootCamp_C# copy.md">
-        <Link>APC1_BootCamp_C# copy.md</Link>
+      <Content Include="..\..\APC1_BootCamp_C#.md">
+        <Link>APC1_BootCamp_C#.md</Link>
       </Content>
     </ItemGroup>
 
