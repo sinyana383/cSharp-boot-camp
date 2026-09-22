@@ -7,23 +7,23 @@
   - [x] [lambda operator](<https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-operator>)
 - :file_folder: Day02
   - [x] [System.IO.File](https://learn.microsoft.com/en-us/dotnet/api/system.io.file?view=net-7.0)
-  - [ ] [Enum](https://learn.microsoft.com/en-us/dotnet/api/system.enum?view=net-7.0)
+  - [x] [Enum](https://learn.microsoft.com/en-us/dotnet/api/system.enum?view=net-7.0)
 - :file_folder: Day03
   - [x] JSON
-  - [ ] YAML
+  - [x] YAML
 - :file_folder: Day04
-  - [ ] Interface
-  - [ ] LINQ
+  - [x] Interface
+  - [x] LINQ
 - :file_folder: Day05
   - [x] HTTP requests
-  - [ ] Async/Await
+  - [x] Async/Await
 - :file_folder: Day06
   - [x] Multithreading
-  - [ ] Deadlocks
-  - [ ] PLINQ
+  - [x] Deadlocks
+  - [x] PLINQ
 - :file_folder: Day07
   - [x] Reflection
-  - [ ] Attributes
+  - [x] Attributes
 - :file_folder: Day08
   - [x] XUnit 
 - :file_folder: Team00
